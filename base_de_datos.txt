@@ -1,0 +1,23 @@
+-- Crear la base de datos
+CREATE DATABASE userdb;
+
+-- Usar la base de datos
+USE userdb;
+
+-- Crear la tabla usuarios con las columnas especificadas
+CREATE TABLE extra (
+    CC INT(12) PRIMARY KEY,
+    nombre VARCHAR(50),
+    clave VARCHAR(255)
+);
+-- Insertar los datos de ejemplo
+INSERT INTO extra (CC, nombre,clave) 
+VALUES (1006457191,"Uziel Ramirez","uzi123");
+
+-- ver los datos
+select*from extra;
+
+-- por si toca modificar algun dato
+UPDATE extra
+SET clave = 'unacontrasenita'
+WHERE CC = 1006457191;
